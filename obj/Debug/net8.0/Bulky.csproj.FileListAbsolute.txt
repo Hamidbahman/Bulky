@@ -1,5 +1,11 @@
 C:\Users\Dr\Bulky\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Dr\Bulky\bin\Debug\net8.0\appsettings.json
+C:\Users\Dr\Bulky\bin\Debug\net8.0\Bulky.DataAccess\obj\Bulky.DataAccess.csproj.nuget.dgspec.json
+C:\Users\Dr\Bulky\bin\Debug\net8.0\Bulky.DataAccess\obj\project.assets.json
+C:\Users\Dr\Bulky\bin\Debug\net8.0\Bulky.Models\obj\Bulky.Models.csproj.nuget.dgspec.json
+C:\Users\Dr\Bulky\bin\Debug\net8.0\Bulky.Models\obj\project.assets.json
+C:\Users\Dr\Bulky\bin\Debug\net8.0\Bulky.Utility\obj\Bulky.Utility.csproj.nuget.dgspec.json
+C:\Users\Dr\Bulky\bin\Debug\net8.0\Bulky.Utility\obj\project.assets.json
 C:\Users\Dr\Bulky\bin\Debug\net8.0\Bulky.staticwebassets.runtime.json
 C:\Users\Dr\Bulky\bin\Debug\net8.0\Bulky.exe
 C:\Users\Dr\Bulky\bin\Debug\net8.0\Bulky.deps.json
@@ -124,6 +130,7 @@ C:\Users\Dr\Bulky\obj\Debug\net8.0\Bulky.csproj.CoreCompileInputs.cache
 C:\Users\Dr\Bulky\obj\Debug\net8.0\Bulky.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Dr\Bulky\obj\Debug\net8.0\Bulky.RazorAssemblyInfo.cache
 C:\Users\Dr\Bulky\obj\Debug\net8.0\Bulky.RazorAssemblyInfo.cs
+C:\Users\Dr\Bulky\obj\Debug\net8.0\Bulky.sourcelink.json
 C:\Users\Dr\Bulky\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Dr\Bulky\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Dr\Bulky\obj\Debug\net8.0\staticwebassets\msbuild.Bulky.Microsoft.AspNetCore.StaticWebAssets.props
@@ -140,3 +147,9 @@ C:\Users\Dr\Bulky\obj\Debug\net8.0\refint\Bulky.dll
 C:\Users\Dr\Bulky\obj\Debug\net8.0\Bulky.pdb
 C:\Users\Dr\Bulky\obj\Debug\net8.0\Bulky.genruntimeconfig.cache
 C:\Users\Dr\Bulky\obj\Debug\net8.0\ref\Bulky.dll
+C:\Users\Dr\Bulky\bin\Debug\net8.0\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.deps.json
+C:\Users\Dr\Bulky\bin\Debug\net8.0\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.sourcelink.json
+C:\Users\Dr\Bulky\bin\Debug\net8.0\Bulky.Models\bin\Debug\net8.0\Bulky.Models.deps.json
+C:\Users\Dr\Bulky\bin\Debug\net8.0\Bulky.Models\obj\Debug\net8.0\Bulky.Models.sourcelink.json
+C:\Users\Dr\Bulky\bin\Debug\net8.0\Bulky.Utility\bin\Debug\net8.0\Bulky.Utility.deps.json
+C:\Users\Dr\Bulky\bin\Debug\net8.0\Bulky.Utility\obj\Debug\net8.0\Bulky.Utility.sourcelink.json
