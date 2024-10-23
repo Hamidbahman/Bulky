@@ -148,6 +148,7 @@ C:\Users\Dr\Bulky\obj\Debug\net8.0\Bulky.pdb
 C:\Users\Dr\Bulky\obj\Debug\net8.0\Bulky.genruntimeconfig.cache
 C:\Users\Dr\Bulky\obj\Debug\net8.0\ref\Bulky.dll
 C:\Users\Dr\Bulky\bin\Debug\net8.0\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.deps.json
+C:\Users\Dr\Bulky\bin\Debug\net8.0\Bulky.DataAccess\bin\Debug\net8.0\Bulky.DataAccess.runtimeconfig.json
 C:\Users\Dr\Bulky\bin\Debug\net8.0\Bulky.DataAccess\obj\Debug\net8.0\Bulky.DataAccess.sourcelink.json
 C:\Users\Dr\Bulky\bin\Debug\net8.0\Bulky.Models\bin\Debug\net8.0\Bulky.Models.deps.json
 C:\Users\Dr\Bulky\bin\Debug\net8.0\Bulky.Models\obj\Debug\net8.0\Bulky.Models.sourcelink.json
