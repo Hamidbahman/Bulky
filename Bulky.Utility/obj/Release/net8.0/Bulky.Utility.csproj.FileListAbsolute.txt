@@ -1,0 +1,10 @@
+C:\Users\Dr\Bulky\Bulky.Utility\bin\Release\net8.0\Bulky.Utility.deps.json
+C:\Users\Dr\Bulky\Bulky.Utility\bin\Release\net8.0\Bulky.Utility.dll
+C:\Users\Dr\Bulky\Bulky.Utility\bin\Release\net8.0\Bulky.Utility.pdb
+C:\Users\Dr\Bulky\Bulky.Utility\obj\Release\net8.0\Bulky.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dr\Bulky\Bulky.Utility\obj\Release\net8.0\Bulky.Utility.csproj.CoreCompileInputs.cache
+C:\Users\Dr\Bulky\Bulky.Utility\obj\Release\net8.0\Bulky.Utility.sourcelink.json
+C:\Users\Dr\Bulky\Bulky.Utility\obj\Release\net8.0\Bulky.Utility.dll
+C:\Users\Dr\Bulky\Bulky.Utility\obj\Release\net8.0\refint\Bulky.Utility.dll
+C:\Users\Dr\Bulky\Bulky.Utility\obj\Release\net8.0\Bulky.Utility.pdb
+C:\Users\Dr\Bulky\Bulky.Utility\obj\Release\net8.0\ref\Bulky.Utility.dll

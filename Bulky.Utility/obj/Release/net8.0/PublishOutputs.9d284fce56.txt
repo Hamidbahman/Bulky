@@ -1,0 +1,3 @@
+C:\Users\Dr\Bulky\Bulky.Utility\bin\Release\net8.0\publish\Bulky.Utility.dll
+C:\Users\Dr\Bulky\Bulky.Utility\bin\Release\net8.0\publish\Bulky.Utility.deps.json
+C:\Users\Dr\Bulky\Bulky.Utility\bin\Release\net8.0\publish\Bulky.Utility.pdb
