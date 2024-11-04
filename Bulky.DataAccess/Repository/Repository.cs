@@ -21,10 +21,29 @@ namespace Bulky.DataAccess.Repository
             dbSet.Add(entity);
         }
 
-        public T? Get(Expression<Func<T, bool>> filter, string? includeProperties = null)
-        {
-            IQueryable<T> query = dbSet.Where(filter);
 
+
+/// <summary>
+/// ////////////////////////////////////////////////
+/// </summary>
+/// <param name="filter"></param>
+/// <param name="includeProperties"></param>
+/// <param name="tracked"></param>
+/// <returns></returns>
+
+        public T? Get(Expression<Func<T, bool>> filter, string? includeProperties = null, bool tracked = false)
+        {
+            IQueryable<T> query;
+            if(tracked)
+            {
+                query= dbSet; 
+            }
+            else
+            {
+                query = dbSet.AsNoTracking();
+            }
+
+            query = query.Where(filter);
             if (!string.IsNullOrEmpty(includeProperties))
             {
                 foreach (var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
@@ -34,7 +53,19 @@ namespace Bulky.DataAccess.Repository
             }
 
             return query.FirstOrDefault();
+
         }
+
+
+
+
+        /// <summary>
+        /// ///////////////////////////////
+        /// </summary>
+        /// <param name="filter"></param>
+        /// <param name="orderBy"></param>
+        /// <param name="includeProperties"></param>
+        /// <returns></returns>
 
         public IEnumerable<T> GetAll(
             Expression<Func<T, bool>>? filter = null,

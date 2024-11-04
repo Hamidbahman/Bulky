@@ -74,6 +74,7 @@ namespace Bulky.Areas.Customer.Controllers
             {
                 _unitOfWork.ShoppingCart.Add(shoppingCart);       //add cart 
             }
+            TempData["success"] = "Cart updated Successfully";
 
             _unitOfWork.Save();
             
