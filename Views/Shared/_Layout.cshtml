@@ -34,6 +34,12 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-area="Customer" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Customer" asp-controller="Home" asp-action="Details">
+                                <i class="bi bi-cart"></i>
+                            </a>
+                        
+                        </li>
 
                         @if (User.IsInRole(SD.Role_Admin)) // Check if the user is an admin
                         {
