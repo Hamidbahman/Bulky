@@ -18,3 +18,4 @@ C:\Users\Dr\Downloads\Compressed\Bulky-master\Bulky-master\Bulky.Models\obj\Debu
 C:\Users\Dr\Downloads\Compressed\Bulky-master\Bulky-master\Bulky.Models\obj\Debug\net8.0\refint\Bulky.Models.dll
 C:\Users\Dr\Downloads\Compressed\Bulky-master\Bulky-master\Bulky.Models\obj\Debug\net8.0\Bulky.Models.pdb
 C:\Users\Dr\Downloads\Compressed\Bulky-master\Bulky-master\Bulky.Models\obj\Debug\net8.0\ref\Bulky.Models.dll
+C:\Users\Dr\Bulky\Bulky.Models\obj\Debug\net8.0\Bulky.Models.sourcelink.json
