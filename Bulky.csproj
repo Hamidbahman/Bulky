@@ -25,6 +25,10 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Customer\Views\Cart\" />
+  </ItemGroup>
+
 
 
 </Project>
