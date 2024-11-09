@@ -34,8 +34,7 @@ namespace Bulky.Areas.Admin.Controllers
 
 
         [HttpGet]
-        [Route("Admin/User/RoleManagement/{userId}")]
-        public IActionResult RoleManagement(string userId)
+        public IActionResult RoleManagment(string userId)
         {
             string RoleID = _db.UserRoles.FirstOrDefault(u=>u.UserId == userId).RoleId;
             
@@ -64,7 +63,7 @@ namespace Bulky.Areas.Admin.Controllers
 
         [HttpPost]
 
-        public IActionResult RoleManagement(RoleManagmentVM roleManagmentVM)
+        public IActionResult RoleManagment(RoleManagmentVM roleManagmentVM)
         {
             string RoleID = _db.UserRoles.FirstOrDefault(u=>u.UserId == roleManagmentVM.ApplicationUser.Id).RoleId;
             string oldRole = _db.Roles.FirstOrDefault(u=>u.Id == RoleID).Name;      

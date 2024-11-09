@@ -1,3 +1,4 @@
+using Bulky.Bulky.Models;
 using Bulky.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -18,6 +19,7 @@ namespace Bulky.DataAccess.Data
         public DbSet<ShoppingCart> ShoppingCarts {get;set;}
         public DbSet<OrderHeader> OrderHeaders {get;set;}
         public DbSet<OrderDetail> OrderDetails {get;set;}
+        public DbSet<ProductImage> ProductImages {get;set;}
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -111,7 +113,6 @@ namespace Bulky.DataAccess.Data
                     Price50=25,
                     Price100=20,
                     CategoryId = 1,
-                    ImageUrl ="",
                 },
                 new Product{
                     Id=2,
@@ -124,7 +125,6 @@ namespace Bulky.DataAccess.Data
                     Price50=22,
                     Price100=19,
                     CategoryId = 1,
-                    ImageUrl ="",
 
                 },
                 new Product{
@@ -138,7 +138,6 @@ namespace Bulky.DataAccess.Data
                     Price50=85,
                     Price100=75,
                     CategoryId = 6,
-                    ImageUrl ="",
 
                 },
                 new Product{
@@ -152,7 +151,6 @@ namespace Bulky.DataAccess.Data
                     Price50=80,
                     Price100=73,
                     CategoryId = 4,
-                    ImageUrl ="",
 
                 },
                 new Product{
@@ -166,7 +164,6 @@ namespace Bulky.DataAccess.Data
                     Price50=120,
                     Price100=99,
                     CategoryId = 5,
-                    ImageUrl ="",
 
                 },
                 new Product{
@@ -180,7 +177,6 @@ namespace Bulky.DataAccess.Data
                     Price50=39,
                     Price100=32,
                     CategoryId = 1,
-                    ImageUrl ="",
 
                 },
                 new Product{
@@ -194,7 +190,6 @@ namespace Bulky.DataAccess.Data
                     Price50=75,
                     Price100=70,
                     CategoryId = 1,
-                    ImageUrl ="",
 
                 },
                 new Product{
@@ -208,7 +203,6 @@ namespace Bulky.DataAccess.Data
                     Price50=49,
                     Price100=45,
                     CategoryId = 4,
-                    ImageUrl ="",
 
                 },
                 new Product{
@@ -222,7 +216,6 @@ namespace Bulky.DataAccess.Data
                     Price50=35,
                     Price100=30,
                     CategoryId = 10,
-                    ImageUrl ="",
 
                 },
                 new Product{
@@ -236,7 +229,6 @@ namespace Bulky.DataAccess.Data
                     Price50=110,
                     Price100=99,
                     CategoryId = 3,
-                    ImageUrl ="",
 
                 }
             );

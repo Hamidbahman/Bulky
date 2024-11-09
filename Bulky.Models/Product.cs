@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Bulky.Bulky.Models;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace Bulky.Models
@@ -34,8 +35,8 @@ namespace Bulky.Models
         [ForeignKey("CategoryId")]
         [ValidateNever]
         public Category Category{get;set;}
-        [ValidateNever]
 
-        public string ImageUrl{get;set;}
+        [ValidateNever]
+        public List<ProductImage> ProductImages{get;set;}
    } 
 }

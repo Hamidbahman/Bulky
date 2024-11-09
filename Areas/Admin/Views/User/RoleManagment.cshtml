@@ -1,5 +1,5 @@
-@using Bulky.Models.ViewModels
-@using Bulky.Utility
+﻿@using Bulky.Utility
+@using Bulky.Bulky.Models.ViewModels;
 @model RoleManagmentVM
 
 <div class="card shadow border-0 mt-4">
@@ -11,36 +11,38 @@
         </div>
     </div>
     <div class="card-body p-4">
-        <form asp-action="RoleManagement" method="post" class="row">
+        <form method="post" class="row g-3">
             <input asp-for="ApplicationUser.Id" hidden />
-
-            <div class="border p-3">
+            <div class="border p-3 col-12">
+                @*<div asp-validation-summary="ModelOnly"></div>*@
                 <div class="form-floating py-2 col-12">
-                    <input asp-for="ApplicationUser.Name" readonly class="form-control border-0 shadow" />
+                    <input asp-for="ApplicationUser.Name" readonly class="form-control form-control-lg border-0 shadow" />
                     <label asp-for="ApplicationUser.Name" class="ms-2"></label>
-                    <span asp-validation-for="ApplicationUser.Name" class="text-danger"></span>
                 </div>
-
                 <div class="form-floating py-2 col-12">
-                    <select asp-for="ApplicationUser.Role" asp-items="@Model.RoleList" class="form-select" id="RoleDropdown">
-                        <option value="">-- Select Role --</option>
+                    <select asp-for="ApplicationUser.Role" asp-items="@Model.RoleList" class="form-select form-select-lg">
                     </select>
                 </div>
-
-                @* Company selection dropdown, hidden by default *@
-                <div class="form-floating py-2 col-12" id="CompanyDropdown" style="display: none;">
-                    <select asp-for="ApplicationUser.CompanyId" asp-items="@Model.CompanyList" class="form-select">
-                        <option value="">-- Select Company --</option>
+                @{
+                    var companyVisible = "display:none;";
+                }
+                @if (Model.ApplicationUser.Role == SD.Role_Company) {
+                    companyVisible = "display:block;";
+                }
+                <div class="form-floating py-2 col-6" id="companyIdDiv" style="@companyVisible">
+                    <select asp-for="ApplicationUser.CompanyId" asp-items="@Model.CompanyList" class="form-select form-select-lg">
                     </select>
-                    <label asp-for="ApplicationUser.CompanyId" class="ms-2"></label>
+                    <label asp-for="ApplicationUser.CompanyId" class="ms-2">Company</label>
                 </div>
 
                 <div class="row pt-2">
                     <div class="col-6 col-md-3">
-                        <button type="submit" class="btn btn-primary form-control">Update Role</button>
+                        <button type="submit" class="btn btn-primary btn-lg form-control">Update Role</button>
                     </div>
                     <div class="col-6 col-md-3">
-                        <a asp-action="Index" class="btn btn-outline-primary border form-control">Back to List</a>
+                        <a asp-action="Index" class="btn btn-outline-primary btn-lg form-control">
+                            Back to List
+                        </a>
                     </div>
                 </div>
             </div>
@@ -48,37 +50,20 @@
     </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-@section Scripts {
+@section Scripts{
+    @{
     <partial name="_ValidationScriptsPartial"/>
+    }
     <script>
         $(document).ready(function () {
-            // Show or hide Company dropdown based on selected role
-            function toggleCompanyDropdown() {
-                var selectedRole = $('#RoleDropdown').val();
-                if (selectedRole === '@SD.Role_Company') {
-                    $('#CompanyDropdown').show();
+            $('#ApplicationUser_Role').change(function () {
+                var selection = $('#ApplicationUser_Role option:selected').text();
+                if (selection == 'Company') {
+                    $('#companyIdDiv').show();
                 } else {
-                    $('#CompanyDropdown').hide();
+                    $('#companyIdDiv').hide();
                 }
-            }
-
-            // Initial check on page load
-            toggleCompanyDropdown();
-
-            // Check whenever the role dropdown changes
-            $('#RoleDropdown').change(function () {
-                toggleCompanyDropdown();
-            });
-        });
+            })
+        })
     </script>
 }
