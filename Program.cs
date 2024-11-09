@@ -1,4 +1,5 @@
 using Bulky.DataAccess.Data;
+using Bulky.DataAccess.DbInitializer;
 using Bulky.DataAccess.Repository;
 using Bulky.DataAccess.Repository.IRepository;
 using Bulky.Models;
@@ -6,6 +7,7 @@ using Bulky.Utility;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
+using NuGet.Packaging.Signing;
 using Stripe;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +21,18 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
+
+
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options=>
+    {
+        options.IdleTimeout = TimeSpan.FromMinutes(100);
+        options.Cookie.HttpOnly=true;
+        options.Cookie.IsEssential = true;
+});
+
+
+builder.Services.AddScoped<IDbInitializer, DbInitializer>();
 
 
 builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
@@ -56,7 +70,8 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
-
+app.UseSession();
+SeedDatabase();
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapRazorPages();
@@ -69,3 +84,12 @@ app.UseEndpoints(endpoints =>
 });
 
 app.Run();
+
+void SeedDatabase()
+{
+    using (var scope = app.Services.CreateScope())
+    {
+        var dbInitializer=scope.ServiceProvider.GetRequiredService<IDbInitializer>();
+        dbInitializer.Initialize();
+    }
+}

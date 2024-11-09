@@ -9,6 +9,7 @@
       "Bulky.DataAccess/1.0.0": {
         "dependencies": {
           "Bulky.Models": "1.0.0",
+          "Bulky.Utility": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.10",
           "Microsoft.AspNetCore.Identity.UI": "8.0.10",
           "Microsoft.EntityFrameworkCore.Design": "8.0.10",
@@ -1853,6 +1854,17 @@
             "fileVersion": "0.0.0.0"
           }
         }
+      },
+      "Bulky.Utility/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.UI": "8.0.10"
+        },
+        "runtime": {
+          "Bulky.Utility.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
       }
     }
   },
@@ -3172,6 +3184,11 @@
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
     "Bulky.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Bulky.Utility/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
